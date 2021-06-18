@@ -1,0 +1,390 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* line-height: 1.2; */
+}
+
+#header {
+  display: flex;
+  justify-content: space-around;
+  /* align-items: center; */
+  margin: 2rem 0 1rem;
+  background-color: #fff;
+}
+
+.logo img {
+  width: 35px;
+}
+
+.form {
+  border-radius: 10px;
+  border: 1px solid #b8b3b371;
+  width: 700px;
+  height: 40px;
+}
+
+.form i {
+  padding: 10px 6px 0 10px;
+  font-size: small;
+  color: #d9d9d9;
+}
+
+#search {
+  border: none;
+  outline: none;
+}
+
+#search::placeholder {
+  color: #919191;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  padding-right: 18px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #919191;
+  font-size: 0.8rem;
+}
+
+.nav-links li:first-child span {
+  background-color: #00a799;
+  color: #ffffff;
+  border-radius: 5px;
+  font-size: 0.7rem;
+  padding: 3px;
+  width: 35px;
+}
+
+#bg {
+  background-image: url("../images/airbnb-bg.webp");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 70vh;
+  position: relative;
+}
+
+.text {
+  background-color: #00a799;
+  width: 220px;
+  color: #fff;
+  padding: 25px 25px 20px;
+  position: absolute;
+  top: 12%;
+  left: 20%;
+  /* margin: 25px 0 0 80px; */
+}
+
+.text h1 {
+  padding-bottom: 12px;
+  font-size: 1.8rem;
+}
+
+.text p {
+  font-size: 0.8rem;
+  padding-bottom: 12px;
+}
+
+.text button {
+  background-color: #ff585b;
+  padding: 10px 15px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  margin: 10px 0;
+}
+
+.text button a {
+  text-decoration: none;
+  color: #fff;
+  font-size: smaller;
+}
+
+#earning {
+  width: 550px;
+  margin: 2rem auto;
+}
+
+#earning h1 span {
+  color: #00a799;
+}
+
+.group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.inputs input {
+  border: 1px solid #dcdcdc;
+  outline: none;
+  padding: 15px 5px;
+  border-radius: 5px;
+}
+
+.inputs select {
+  border: 1px solid #dcdcdc;
+  outline: none;
+  padding: 15px 5px;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.avg {
+  background-color: #00a799;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.avg b {
+  font-size: 1.5rem;
+}
+
+.works {
+  text-align: center;
+  color: #dcdcdc;
+  padding: 3rem 0;
+}
+
+.signUp {
+  width: 550px;
+  margin: 2rem auto;
+}
+
+.signUp p:first-child {
+  border-radius: 50%;
+  border: 1px solid #a19e9e;
+  width: 25px;
+  font-size: 0.7rem;
+  padding: 5px 7px;
+  text-align: center;
+  color: #a19e9e;
+}
+
+.signUp h1 {
+  padding: 10px 0;
+}
+
+.signUp p:last-child {
+  font-size: 0.8rem;
+  color: #a19e9e;
+  font-weight: bold;
+}
+
+#menuToggle {
+  display: block;
+  position: relative;
+  top: 10px;
+  left: 50px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mobile-logo img {
+  width: 25px;
+  margin: 10px 20px 5px 0;
+}
+
+#menuToggle a {
+  text-decoration: none;
+  color: #232323;
+
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+  color: tomato;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -4px;
+  left: -5px;
+
+  cursor: pointer;
+
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background: #252424;
+  border-radius: 3px;
+
+  z-index: 1;
+
+  transform-origin: 4px 0px;
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu {
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+
+/* Media Query/Responsive */
+@media only screen and (max-width: 768px) {
+  #earning {
+    width: unset;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #earning h1 {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+
+  .group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 1rem;
+  }
+
+  .inputs input {
+    border: 1px solid #dcdcdc;
+    outline: none;
+    padding: 15px 5px;
+    border-radius: 5px;
+    margin-top: 1rem;
+  }
+
+  .inputs select {
+    border: 1px solid #dcdcdc;
+    outline: none;
+    padding: 15px 5px;
+    border-radius: 5px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .signUp {
+    width: unset;
+    /* margin: 2rem auto; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .signUp p:last-child {
+      text-align: center;
+  }
+}
+
+@media screen and (min-width: 1011px) {
+  .mobile-view {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 1011px) {
+  .desktop-view {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}

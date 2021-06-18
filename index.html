@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./images/airbnb-logo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./style/airbnb.css" />
+    <title>Airbnb</title>
+    <!--[if lt IE 9]>
+      <script src="/js/html5shiv.js"></script>
+    <![endif]-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header id="header" class="desktop-view">
+      <div class="logo">
+        <a href="#">
+          <img src="./images/airbnb-logo.png" alt="" />
+        </a>
+      </div>
+      <form class="form">
+        <i class="fa fa-search" aria-hidden="true"></i
+        ><input type="search" name="search" placeholder="Search" id="search" />
+      </form>
+      <nav class="nav-items">
+        <ul class="nav-links">
+          <li>
+            <a href="#">For work <span>New</span></a>
+          </li>
+          <li>
+            <a href="#">Help</a>
+          </li>
+          <li>
+            <a href="#">Sign Up</a>
+          </li>
+          <li>
+            <a href="#">Log In</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <nav role="navigation" class="mobile-view flex">
+      <div id="menuToggle">
+        <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+        <input type="checkbox" />
+
+        <!--
+    Some spans to act as a hamburger.
+    
+    They are acting like a real hamburger,
+    not that McDonalds stuff.
+    -->
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <!--
+    Too bad the menu has to be inside of the button
+    but hey, it's pure CSS magic.
+    -->
+        <ul id="menu">
+          <a href="#"
+            ><li>For work <span>New</span></li></a
+          >
+          <a href="#"><li>Help</li></a>
+          <a href="#"><li>Sign Up</li></a>
+          <a href="#"><li>Log In</li></a>
+          <form class="">
+            <i class="fa fa-search" aria-hidden="true"></i
+            ><input type="search" name="search" placeholder="Search" id="" />
+          </form>
+        </ul>
+      </div>
+      <!-- <div class="logo"> -->
+      <a href="#" class="mobile-logo">
+        <img src="./images/airbnb-logo.png" alt="" />
+      </a>
+      <!-- </div> -->
+    </nav>
+
+    <div id="bg">
+      <div class="text">
+        <h1>Earn Money As an Airbnb Host</h1>
+        <p>
+          From saving for home repairs to taking a dream trip, hosts use extra
+          incomes to fund their passions
+        </p>
+        <button>
+          <a href="#">Start Hosting</a>
+        </button>
+      </div>
+    </div>
+    <div id="earning">
+      <h1>What you could earn in <span>Boston</span></h1>
+      <div class="group">
+        <div class="">
+          <input type="radio" name="place" id="" checked /> Entire place <br />
+          <input type="radio" name="private" id="" /> Private room <br />
+          <input type="radio" name="shared" id="" /> Shared room <br />
+        </div>
+        <div class="inputs">
+          <input type="text" placeholder="e.g. San Francisco" /><br />
+          <select name="guests" id="">
+            <option value="guest1">1 Guest</option>
+            <option value="guest2">2 Guest</option>
+            <option value="guest3">3 Guest</option>
+            <option value="guest4">4 Guest</option>
+          </select>
+        </div>
+        <div class="">
+          <div class="avg">
+            <b>$903</b> <br />
+            <span>weekly average</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="works">
+      <h3>HOW HOSTING WORKS</h3>
+    </div>
+    <div class="signUp">
+      <p>1</p>
+      <h1>Sign up to host</h1>
+      <p>
+        Start by creating your listing. It's like a profile page for your place.
+      </p>
+    </div>
+  </body>
+</html>
